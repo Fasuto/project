@@ -2,8 +2,8 @@
 
 require_once __DIR__.'/../vendor/autoload.php';
 
-use App\Models\User;
+use App\Kernel\Request;
 
-$user = new User();
-
-echo $user->sayHello();
+header("Content-Type: application/json");
+$request = new Request();
+print_r($request);
