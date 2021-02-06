@@ -9,5 +9,4 @@ $request = new Request();
 $router = new Router();
 $router->register('routes.php');
 
-header("Content-Type: application/json");
-print_r($router->resolve($request));
+$router->resolve($request);
