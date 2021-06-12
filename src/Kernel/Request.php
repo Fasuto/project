@@ -17,7 +17,7 @@ class Request
 
     public function __construct()
     {
-        $this->contentType = $_SERVER['CONTENT_TYPE'];
+        $this->contentType = $_SERVER['CONTENT_TYPE'] ?? '';
         $this->method = strtoupper($_SERVER['REQUEST_METHOD']);
         $this->url = $_SERVER['PATH_INFO'] ?? '/';
         $this->ip = $_SERVER['REMOTE_ADDR'];

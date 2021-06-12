@@ -41,7 +41,7 @@ class Router
         if( $callback != null ){
             call_user_func($callback, $request);
         }else{
-            echo 'Página no encontrada';
+            Response::view('Errors.404');
         }
 
     }

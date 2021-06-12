@@ -30,7 +30,7 @@ class Response
         include_once $viewPath;
         $content = ob_get_clean();
         include_once $layoutPath;
-        $viewRender = ob_get_clean();
+        $viewRender = ob_get_contents();
         ob_end_clean();
         echo $viewRender;
     }
@@ -51,7 +51,7 @@ class Response
         include_once $viewPath;
         $content = ob_get_clean();
         include_once $layoutPath;
-        $viewRender = ob_get_clean();
+        $viewRender = ob_get_contents();
         ob_end_clean();
         echo $viewRender;
 

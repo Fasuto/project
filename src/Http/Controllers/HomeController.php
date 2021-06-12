@@ -11,11 +11,11 @@ class HomeController
 {
 
     public function index(Request $request){
-        Response::view('home',$request->getParameters());
+        Response::view('home', ['activeUrl'=>$request->getUrl()]);
     }
 
-    public function redirect(){
-        Response::redirect('/');
+    public function login(Request $request){
+        Response::view('Auth.login', ['activeUrl'=>$request->getUrl()]);
     }
 
 }
